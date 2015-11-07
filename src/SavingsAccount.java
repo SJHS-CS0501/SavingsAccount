@@ -4,6 +4,8 @@
  * 
  */
 
+// Just adding this comment to make a little change to test something
+
 /**
  * This is a class for savings accounts
  * @author Ryan Luchs
@@ -49,3 +51,5 @@ public class SavingsAccount {
 		return balance - oldBalance; // return amount of interest made
 	}
 }
+
+
