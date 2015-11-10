@@ -72,12 +72,12 @@ public class SavingsAccountTest {
 		} while (interestRate < 0);
 		
 		do { // Get months since account was made + input verification
-			System.out.print("Months since account was openned: ");
+			System.out.print("Months since account was opened: ");
 			
 			while (!input.hasNextInt()) {
 				input.next();
 				System.out.printf("Error: Interest must be a non-negative integer.\n\n");
-				System.out.print("Months since account was openned: ");
+				System.out.print("Months since account was opened: ");
 			}
 			
 			months = input.nextInt();
@@ -94,6 +94,8 @@ public class SavingsAccountTest {
 		// Gets the amount deposited and withdraw for each month, 
 		// and calculates the new account balance factoring in the monthly interest rate
 		for (int ctr = 0; ctr < months; ctr++){
+			
+			System.out.println("#" + user.balance);
 			
 			ipt = 0;
 			do{ // get amount deposited this month + input verification

@@ -47,7 +47,7 @@ public class SavingsAccount {
      */
 	public double addMonthlyInterest(){
 		double oldBalance = balance; // store old balance value
-		balance += 1 + (annualInterest/12) * balance; // calculate new balance after interest
+		balance *= 1 + (annualInterest/12); // calculate new balance after interest
 		return balance - oldBalance; // return amount of interest made
 	}
 }
