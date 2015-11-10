@@ -95,7 +95,7 @@ public class SavingsAccountTest {
 		// and calculates the new account balance factoring in the monthly interest rate
 		for (int ctr = 0; ctr < months; ctr++){
 			
-			System.out.println("#" + user.balance);
+			//System.out.println("#" + user.balance);
 			
 			ipt = 0;
 			do{ // get amount deposited this month + input verification
