@@ -13,6 +13,7 @@ public class SavingsAccount {
 	 */
 	public static void main(String[] args) {
 		Scanner keyboard = new Scanner( System.in );
+		SavingsAccountTest test = new SavingsAccountTest(); 
 		double balance = 0;
 		int choice;
 		
@@ -70,7 +71,13 @@ public class SavingsAccount {
 		return balance;
 	}
 	
+	/**
+	 * Calculating monthly interest and new balance after addition of monthly interest
+	 * @param balance before monthly interest is added
+	 * @return balance after monthly interest is added
+	 */
 	public static double monthlyInterest( double balance ) {
+		double monthlyInterest;
 		
 		monthlyInterest = //monthly interest rate
 				* balance;
