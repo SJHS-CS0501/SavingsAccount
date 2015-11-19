@@ -8,4 +8,7 @@
  */
 public class SavingsAccount {
 
+	private String Intrate;
+	
+	
 }
