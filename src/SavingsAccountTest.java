@@ -3,7 +3,7 @@
  */
 
 /**
- * @author woytek
+ * @author Ryley
  *
  */
 public class SavingsAccountTest {
