@@ -16,8 +16,10 @@ public class SavingsAccountTest {
 		SavingsAccount test = new SavingsAccount(); //creates new SavingsAccountTest
 		double balance = 0; //user's balance
 		double annualInterest; //annual interest rate
-		int choice; //what user wants to do
+		double deposit; //amount deposited
+		double withdrawal;
 		int est; //when account was established
+		int ctr; //counter
 		
 		System.out.print( "What is the amount of money currently in your savings account?" );
 		balance = keyboard.nextDouble();
@@ -25,69 +27,21 @@ public class SavingsAccountTest {
 		System.out.print( "What is the savings account's annual interest rate?" );
 		annualInterest = keyboard.nextDouble();
 		
-		System.out.print( "Do you want to:\n1. make a withdrawal.\n2. make a deposit.\n3. calculate balance including "
-						+ "monthly interest.\nType in the number corresponding to your choice" );
-		choice = keyboard.nextInt();
+		System.out.print( "How many months have passed since this account has been established?" );
+		est = keyboard.nextInt();
 		
-		switch( choice ) {
-			case 1:
-				withdrawal(balance);
-				break;
-			case 2:
-				deposit(balance);
-				break;
-			case 3:
-				monthlyInterest(balance , annualInterest);
-				break;
+		for( ctr = 0; ctr > est; ctr++ ) {
+			System.out.print( "How much was deposited into the account during month " + ctr + "?" );
+			deposit = keyboard.nextDouble();
+			SavingsAccount.deposit(deposit);
+			
+			System.out.print( "How much was withdrawn from the account during month " + ctr + "?" );
+			withdrawal = keyboard.nextDouble();
+			SavingsAccount.withdrawal(withdrawal);
+			
+			SavingsAccount.monthlyInterest();
+			
+			
 		}
 	}
-	
-	/**
-	 * Making a withdrawal
-	 * @param balance before withdrawal
-	 * @return balance after withdrawal
-	 */
-	public static double withdrawal( double balance ) {
-		double withdrawal = 0;
-		Scanner keyboard = new Scanner( System.in );
-		
-		System.out.print( "How much would you like to take out?" );
-		withdrawal = keyboard.nextDouble();
-		
-		balance -= withdrawal;
-		
-		return balance;
-	}
-	
-	/**
-	 * Making a deposit
-	 * @param balance before deposit
-	 * @return balance after deposit
-	 */
-	public static double deposit( double balance ) {
-		double deposit = 0;
-		Scanner keyboard = new Scanner( System.in );
-		
-		System.out.print( "How much would you like to deposit?" );
-		deposit = keyboard.nextDouble();
-		
-		balance += deposit;
-		
-		return balance;
-	}
-	
-	/**
-	 * Calculating monthly interest and new balance after addition of monthly interest
-	 * @param balance before monthly interest is added
-	 * @return balance after monthly interest is added
-	 */
-	public static double monthlyInterest( double balance , double annualInterest ) {
-		double monthlyInterest;
-		
-		monthlyInterest =  annualInterest / 12;
-		
-		balance += monthlyInterest;
-		return balance;
-	}
-
 }
