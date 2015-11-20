@@ -7,15 +7,20 @@ import java.util.Scanner;
  */
 public class SavingsAccount {
 	
+	//set private so no one can fool with them
+	private static double balance;
+	private static double annualInterest;
+	private static int est;
+	
+	
 	/**
 	 * Setting balance
 	 * @author Julianna Nichols
 	 */
-	private void setBalance() {
-		double balance = 0; //user's balance
+	public static void setBalance() {
 		Scanner keyboard = new Scanner( System.in );
 		
-		System.out.print( "What is the amount of money currently in your savings account?" );
+		System.out.println( "What is the amount of money currently in your savings account?" );
 		balance = keyboard.nextDouble();
 	}
 	
@@ -23,11 +28,10 @@ public class SavingsAccount {
 	 * Setting annual interest
 	 * @author Julianna Nichols
 	 */
-	private void setAnnualInterest() {
-		double annualInterest; //annual interest rate
+	public static void setAnnualInterest() {
 		Scanner keyboard = new Scanner( System.in );
 		
-		System.out.print( "What is the savings account's annual interest rate?" );
+		System.out.println( "What is the savings account's annual interest rate? (decimal percentage)" );
 		annualInterest = keyboard.nextDouble();
 	}
 	
@@ -35,11 +39,10 @@ public class SavingsAccount {
 	 * Setting how many months since the account has been established
 	 * @author Julianna Nichols
 	 */
-	private void setEst() {
-		int est; //when account was established
+	public static void setEst() {
 		Scanner keyboard = new Scanner( System.in );
 		
-		System.out.print( "How many months have passed since this account has been established?" );
+		System.out.println( "How many months have passed since this account has been established? " );
 		est = keyboard.nextInt();
 	}
 
@@ -72,7 +75,7 @@ public class SavingsAccount {
  	* @param balance before monthly interest is added
  	* @return balance after monthly interest is added
  	*/
-	public static double monthlyInterest( double annualInterest ) {
+	public static double monthlyInterest() {
 		double monthlyInterest;
 	
 		monthlyInterest =  annualInterest / 12;
@@ -89,4 +92,11 @@ public class SavingsAccount {
 		return balance;
 	}
 	
+	/**
+	 * Get how many months ago the account was established
+	 * @return established (number of months ago)
+	 */
+	public static int getEst() {
+		return est;
+	}
 }

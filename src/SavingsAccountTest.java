@@ -18,7 +18,11 @@ public class SavingsAccountTest {
 		double withdrawal;
 		int ctr; //counter
 		
-		for( ctr = 0; ctr > est; ctr++ ) {
+		SavingsAccount.setBalance();
+		SavingsAccount.setAnnualInterest();
+		SavingsAccount.setEst();
+		
+		for( ctr = 1; ctr <= SavingsAccount.getEst(); ctr++ ) {
 			System.out.print( "How much was deposited into the account during month " + ctr + "?" );
 			deposit = keyboard.nextDouble();
 			SavingsAccount.deposit(deposit);
@@ -28,7 +32,6 @@ public class SavingsAccountTest {
 			SavingsAccount.withdrawal(withdrawal);
 			
 			SavingsAccount.monthlyInterest();
-			
 			
 		}
 	}
