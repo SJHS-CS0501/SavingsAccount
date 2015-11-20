@@ -18,21 +18,23 @@ public class SavingsAccountTest {
 		double withdrawal;
 		int ctr; //counter
 		
-		SavingsAccount.setBalance();
-		SavingsAccount.setAnnualInterest();
-		SavingsAccount.setEst();
+		SavingsAccount.setBalance(); //setting balance
+		SavingsAccount.setAnnualInterest(); //setting annual interest
+		SavingsAccount.setEst(); //setting how many months have passed since the account was established
 		
 		for( ctr = 1; ctr <= SavingsAccount.getEst(); ctr++ ) {
-			System.out.print( "How much was deposited into the account during month " + ctr + "?" );
+			System.out.print( "How much was deposited into the account during month " + ctr + "? " );
 			deposit = keyboard.nextDouble();
-			SavingsAccount.deposit(deposit);
+			SavingsAccount.deposit(deposit); //adding deposit to balance
 			
-			System.out.print( "How much was withdrawn from the account during month " + ctr + "?" );
+			System.out.print( "How much was withdrawn from the account during month " + ctr + "? " );
 			withdrawal = keyboard.nextDouble();
-			SavingsAccount.withdrawal(withdrawal);
+			SavingsAccount.withdrawal(withdrawal); //subtracting withdrawal from balance
 			
-			SavingsAccount.monthlyInterest();
+			SavingsAccount.monthlyInterest(); //calculating and adding monthly interest to balance
 			
 		}
+		
+		System.out.printf( "There is currently $%.2f in your account!" , SavingsAccount.getBalance() );
 	}
 }

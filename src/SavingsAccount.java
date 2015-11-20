@@ -20,7 +20,7 @@ public class SavingsAccount {
 	public static void setBalance() {
 		Scanner keyboard = new Scanner( System.in );
 		
-		System.out.println( "What is the amount of money currently in your savings account?" );
+		System.out.print( "What is the amount of money currently in your savings account? " );
 		balance = keyboard.nextDouble();
 	}
 	
@@ -31,7 +31,7 @@ public class SavingsAccount {
 	public static void setAnnualInterest() {
 		Scanner keyboard = new Scanner( System.in );
 		
-		System.out.println( "What is the savings account's annual interest rate? (decimal percentage)" );
+		System.out.print( "What is the savings account's annual interest rate? (decimal percentage) " );
 		annualInterest = keyboard.nextDouble();
 	}
 	
@@ -42,13 +42,13 @@ public class SavingsAccount {
 	public static void setEst() {
 		Scanner keyboard = new Scanner( System.in );
 		
-		System.out.println( "How many months have passed since this account has been established? " );
+		System.out.print( "How many months have passed since this account has been established? " );
 		est = keyboard.nextInt();
 	}
 
 	/**
  	* Making a withdrawal
- 	* @param balance before withdrawal
+ 	* @param amount withdrawn
  	* @return balance after withdrawal
  	*/
 	public static double withdrawal( double withdrawal ) {
@@ -61,7 +61,7 @@ public class SavingsAccount {
 
 	/**
  	* Making a deposit
- 	* @param balance before deposit
+ 	* @param amount deposited
  	* @return balance after deposit
  	*/
 	public static double deposit( double deposit ) {
