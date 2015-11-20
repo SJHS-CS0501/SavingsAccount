@@ -14,21 +14,9 @@ public class SavingsAccountTest {
 	public static void main(String[] args) {
 		Scanner keyboard = new Scanner( System.in ); //creates Scanner object
 		SavingsAccount test = new SavingsAccount(); //creates new SavingsAccountTest
-		double balance = 0; //user's balance
-		double annualInterest; //annual interest rate
 		double deposit; //amount deposited
 		double withdrawal;
-		int est; //when account was established
 		int ctr; //counter
-		
-		System.out.print( "What is the amount of money currently in your savings account?" );
-		balance = keyboard.nextDouble();
-		
-		System.out.print( "What is the savings account's annual interest rate?" );
-		annualInterest = keyboard.nextDouble();
-		
-		System.out.print( "How many months have passed since this account has been established?" );
-		est = keyboard.nextInt();
 		
 		for( ctr = 0; ctr > est; ctr++ ) {
 			System.out.print( "How much was deposited into the account during month " + ctr + "?" );

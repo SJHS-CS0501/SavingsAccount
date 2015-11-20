@@ -7,12 +7,41 @@ import java.util.Scanner;
  */
 public class SavingsAccount {
 	
-	//private void setBalance( double balance) {
+	/**
+	 * Setting balance
+	 * @author Julianna Nichols
+	 */
+	private void setBalance() {
+		double balance = 0; //user's balance
+		Scanner keyboard = new Scanner( System.in );
 		
-	//}
-	//private void setAnnualInterest( double interest ) {
+		System.out.print( "What is the amount of money currently in your savings account?" );
+		balance = keyboard.nextDouble();
+	}
+	
+	/**
+	 * Setting annual interest
+	 * @author Julianna Nichols
+	 */
+	private void setAnnualInterest() {
+		double annualInterest; //annual interest rate
+		Scanner keyboard = new Scanner( System.in );
 		
-	//}
+		System.out.print( "What is the savings account's annual interest rate?" );
+		annualInterest = keyboard.nextDouble();
+	}
+	
+	/**
+	 * Setting how many months since the account has been established
+	 * @author Julianna Nichols
+	 */
+	private void setEst() {
+		int est; //when account was established
+		Scanner keyboard = new Scanner( System.in );
+		
+		System.out.print( "How many months have passed since this account has been established?" );
+		est = keyboard.nextInt();
+	}
 
 	/**
  	* Making a withdrawal
