@@ -7,11 +7,18 @@ import java.util.Scanner;
  */
 public class SavingsAccount {
 	
+	/**
+	 * Constructor..?
+	 * @param
+	 */
+	SavingsAccount() {
+		
+	}
+	
 	//set private so no one can fool with them
 	private static double balance;
 	private static double annualInterest;
 	private static int est;
-	
 	
 	/**
 	 * Setting balance
@@ -77,9 +84,10 @@ public class SavingsAccount {
  	*/
 	public static double monthlyInterest() {
 		double monthlyInterest;
-	
+		
+		//following instructions for Java Book to add monthly interest to balance
 		monthlyInterest =  annualInterest / 12;
-	
+		monthlyInterest *= balance;
 		balance += monthlyInterest;
 		return balance;
 	}
@@ -98,5 +106,17 @@ public class SavingsAccount {
 	 */
 	public static int getEst() {
 		return est;
+	}
+	
+	/**
+	 * Get monthly interest
+	 * @return monthly interest
+	 */
+	public static double getMonInt() {
+		double monthlyInterest;
+		
+		monthlyInterest =  annualInterest / 12;
+		monthlyInterest *= balance;
+		return monthlyInterest;
 	}
 }
