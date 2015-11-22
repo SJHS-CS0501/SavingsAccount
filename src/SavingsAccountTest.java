@@ -2,8 +2,13 @@ import java.text.DecimalFormat;
 import java.util.Scanner;
 
 /**
+<<<<<<< HEAD
  * @author Ryley Danielson
  *Uses the SavingsAccount class to calculate someone's banking account balance
+=======
+ * @author Ryley
+ *
+>>>>>>> origin/master
  */
 public class SavingsAccountTest {
 
@@ -87,6 +92,8 @@ public class SavingsAccountTest {
 				totalBalance = count.getMonthIntrest();
 		}
 		
+
+
 	}
 		if(totalBalance <= 0){
 			
