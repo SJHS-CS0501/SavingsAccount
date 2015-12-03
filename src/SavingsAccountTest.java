@@ -25,7 +25,7 @@ public class SavingsAccountTest {
 
 	    // Create class
 	    SavingsAccountTest savingAccountTest = new SavingsAccountTest();
-	    SavingsAccount savingsAccount = savingAccountTest.new SavingsAccount(startingBalance, annualInterestRate);
+	    SavingsAccount savingsAccount = new SavingsAccount(startingBalance, annualInterestRate);
 
 	    System.out.print("How long has the account been opened? ");
 	    double months = keyboard.nextInt();
